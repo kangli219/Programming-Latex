@@ -1,0 +1,348 @@
+\documentclass[10pt]{beamer}
+
+%% Presentation Themes with a Mini Frame Navigation
+\usetheme{Frankfurt}  % a variation of Berlin that is slightly less cluttered by leaving out the subsection information
+\setbeamertemplate{footline}[page number]
+%\usetheme[compress]{Berlin}
+%\usetheme{Singapore}
+
+%% Presentation Themes with Section and Subsection Tables
+%\usetheme{CambridgeUS}
+
+
+%% color and font
+\usecolortheme{seahorse}
+%\usecolortheme{rose}
+\usefonttheme{serif}
+%\usefonttheme{professionalfonts}
+
+%% special set
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{enumerate items}[default]
+\setbeamerfont{frametitle}{size=\large}
+\setbeamerfont{subsection in toc}{size=\small}
+
+\setbeamertemplate{section in toc}{%
+	{\color{blue}\inserttocsectionnumber.}~\inserttocsection}
+
+\setbeamertemplate{subsection in toc}{%
+	\hspace{1.5em}{\color{blue}\rule[0.3ex]{3pt}{3pt}}~\inserttocsubsection \par}
+
+
+%% make animattion of item lists grey rather than disappearing
+\setbeamercovered{transparent}
+
+\setbeamertemplate{footline}[frame number]{}
+
+
+% both for broad mathematic symbols
+\usepackage{amsmath}
+\usepackage{amssymb}     
+\usepackage{bbm}  % for indicator function
+\usepackage{xcolor} % text color
+
+
+% to change line space
+\usepackage{setspace}
+%\doublespacing
+
+% enumerate
+\usepackage{enumerate}
+
+% input graphs
+\usepackage{graphicx}     
+% \usepackage{xeCJK}
+\graphicspath{ {image/} }
+
+% draw figures
+\usepackage{tikz}
+\tikzset{
+	invisible/.style={opacity=0},
+	visible on/.style={alt={#1{}{invisible}}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+	},
+}
+
+
+% deal with citations
+\usepackage{natbib}  
+% different citation styles
+%\bibliographystyle{unsrtnat}
+\bibliographystyle{apalike}
+
+
+% make tables
+\usepackage{threeparttable, booktabs}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+
+% place tables in the exact page I want, uisng \FloatBarrier
+\usepackage{placeins}    
+
+% hyperlinks
+\usepackage{hyperref} 
+
+\usepackage{appendixnumberbeamer} 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[ ] % (optional, use only with long paper titles)
+{}
+
+\usepackage{mathpazo}
+
+\author[ ] % (optional, use only with lots of authors)
+{Kangli Li \inst{1}}
+
+\institute[]{\inst{1} University of Wisconsin-Madison}
+
+\date[ ] % (optional, should be abbreviation of conference name)
+{Presentation name}
+
+
+\begin{document}
+	\setbeamertemplate{navigation symbols}{}
+	% turn off navigation symbols at the the bottom right-hand corner of the screen
+	
+\begin{frame}
+	\titlepage
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Motivation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Motivation}
+\linespread{1.5}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Motivation}
+\linespread{1.5}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Research Questions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Research Question}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Preview of Methods}
+\linespread{1.5}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Preview of Results}
+\linespread{1.5}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Roadmap}
+%\tableofcontents[pausesections]
+	\tableofcontents[hideallsubsections]
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Background}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Institutional Background}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Institutional Background}
+\linespread{1.5}
+\begin{enumerate}
+	\item <1> a
+	
+	\item <2-> b
+
+	\item <3> c
+\end{enumerate}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{The Land Reform since late 90s}
+\linespread{1.5}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Literature Review}
+
+\begin{frame}{Literature Review}
+\linespread{1.5}
+\small 
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Model}
+
+
+\subsection{Model Setup}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Model Setup}
+\small 
+
+\end{frame}
+
+
+\subsection{Model Predictions}
+\begin{frame}{Model Predictions}
+\end{frame}
+
+
+
+\begin{frame}{Take-away}
+
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data context}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Data Context}
+\linespread{1.5}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Summary Statistics}
+\begin{frame}{Summary Statistics}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Empirical Strategy \& Results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Difference in Differences}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Difference in Differences}
+\small 
+\linespread{1.25}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Logistic Regression}
+
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Future Discussions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Discussions}
+\linespread{1.5}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Policy Implications}
+\linespread{1.5}
+
+\end{frame} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\end{frame} % to enforce entries in the table of contents
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix 
+
+\section{Appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[allowframebreaks]{References} 
+%\def\newblock{}
+\footnotesize
+\bibliographystyle{apalike}	
+%\bibliography{../bibliography_land}
+\end{frame}
+
+\end{document}
