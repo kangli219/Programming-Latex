@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Background}{4}{0}{2}
+\beamer@sectionintoc {3}{Model}{7}{0}{3}
+\beamer@sectionintoc {4}{Data}{11}{0}{4}
+\beamer@sectionintoc {5}{Empirical Strategy \& Results}{13}{0}{5}
+\beamer@sectionintoc {6}{Conclusions \& next steps}{21}{0}{6}
