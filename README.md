@@ -4,7 +4,7 @@ This file provides a fancy template for applied economists to write slides using
 
 Here is a list of features of the template:
 
-1. Self-defined beamer theme, fonts, font size, colors, itemize style, table of contents, etc.
+1. Self-defined beamer theme, fonts, font size, colors, itemize style, table of contents, modern 16:9 stye, etc.
 
 2. Adding figures with size adjusted.
 
