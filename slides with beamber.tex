@@ -292,48 +292,32 @@ A financial institution optimizes:
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[shrink=40]{Animated Model Illustration}
-\begin{figure}
-	\centering
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{annimated illustration}
+\centering
+\setbeamercovered{invisible}
+\resizebox{0.72\linewidth}{!}{
 	\begin{tikzpicture}
 	% setup
-	\draw [->, visible on=<1->] (0,0) - - (16,0) node[right]{\Large $l_e$};
-	\draw [->, visible on=<1->] (0,0) - - (0,12) node[left]{\Large $l^*$};
-	\draw [dashed, visible on=<1->] (0,0) -- (16, 12) node[below]{\Large $l^*=l_e$};
-	
+	\draw [->] (0,0) - - (10,0) node[right]{\Large $l_e=\frac{L_e}{T_e}$};
+	\draw [->] (0,0) - - (0,6) node[above]{\Large $l^*=\frac{L^*}{T^*}$};
+	\draw [dashed] (0,0) -- (8, 6) node[above]{\Large $l^*=l_e$};
 	% original optimization
-	\draw [ultra thick, visible on=<1->] (4,12) -- (4,0);
-	\draw [ultra thick, visible on=<1->] (8,12) -- (8,0);
-	\draw [ultra thick, visible on=<1->] (0,3) -- (4,3)--(8,6)--(16,6) node[right,black]{\Large $(c_1,\theta_1)$} ;
-	\node [below, visible on=<1>] at (2,0) {\LARGE Rent-out};
-	\node [below, visible on=<1>] at (6,0) {\LARGE Autarky};
-	\node [below, visible on=<1>] at (10,0) {\LARGE Rent-in};
-	
+	\draw [ultra thick] (2,0) -- (2,6) node[above]{$\underline{l}_e(c)$};
+	\draw [ultra thick] (6,0) -- (6,6) node[above]{$\bar{l}_e(c)$};
+	\draw [ultra thick] (0,1.5) -- (2,1.5)--(6,4.5)--(9,4.5) node[right,black]{large c} ;
+	\draw [decorate,decoration={brace,amplitude=5pt,mirror,raise=2ex}] (0,0) -- (1.9,0) node[midway, below, blue, yshift=-1.6em, align=center]{rent-out};
+	\draw [decorate,decoration={brace,amplitude=5pt,mirror,raise=2ex}] (2.1,0) -- (5.9,0) node[midway, below, blue, yshift=-1.6em, align=center]{autarky};
+	\draw [decorate,decoration={brace,amplitude=5pt,mirror,raise=2ex}] (6.1,0) -- (9.6,0) node[midway, below, blue, yshift=-1.6em, align=center]{rent-in};
 	% new optimization, change c given theta
-	\draw [ultra thick, orange, visible on=<2->] (5,12) -- (5,0);
-	\draw [ultra thick, orange, visible on=<2->] (7,12) -- (7,0);
-	\draw [ultra thick, orange, visible on=<2->] (0,3.75) -- (5,3.75)--(7,5.25)--(16,5.25) node[right, black]{\Large $(c_2, \theta_1)$};
-	\draw [->, ultra thick, orange, visible on=<2->] (4.2,9) -- (4.8, 9);
-	\draw [->, ultra thick, orange, visible on=<2->] (7.8,9) -- (7.2, 9);
-	\node [below, visible on=<2>, orange] at (2.5,0) {\LARGE Rent-out};
-	\node [below, visible on=<2>, orange] at (6,0) {\LARGE Autarky};
-	\node [below, visible on=<2>, orange] at (9.5,0) {\LARGE Rent-in};
-	
-	% new optimization, change both c and theta
-	\draw [ultra thick, blue, visible on=<3->] (10,12) -- (10,0);
-	\draw [ultra thick, blue, visible on=<3->] (12,12) -- (12,0);
-	\draw [ultra thick, blue, visible on=<3->] (0,7.5) -- (10,7.5)--(12,9)--(16,9) node[right, black]{\Large $(c_2,\theta_2)$};
-	\draw [->, ultra thick, blue, visible on=<3->] (8.2,10) -- (9.8, 10);
-	\node [below, visible on=<3>, blue] at (7,0) {\LARGE Rent-out};
-	\node [below, visible on=<3>, blue] at (11,0) {\LARGE Autarky};
-	\node [below, visible on=<3>, blue] at (15,0) {\LARGE Rent-in};	
-	
-	% legend
-	\node [visible on=<2->] at (16,4) {\LARGE $c_1 > c_2$};			
-	\node [visible on=<3->] at (16,3) {\LARGE $\theta_1 < \theta_2$};
-	\end{tikzpicture}
-\end{figure}
+	\onslide<2>{
+	\draw [ultra thick, green] (3,6) -- (3,0);
+	\draw [ultra thick, green] (5,6) -- (5,0);
+	\draw [ultra thick, green] (0,2.25) -- (3,2.25)--(5,3.75)--(9,3.75) node[right, black]{small c};
+	\draw [->, ultra thick, red] (2.2,5) -- (2.8, 5);
+	\draw [->, ultra thick, red] (5.8,5) -- (5.2, 5);
+	}
+	\end{tikzpicture}}
 \end{frame}
 
 
@@ -362,7 +346,7 @@ A financial institution optimizes:
 \subsection*{Regressions on subprime lending}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Regressions on subprime lending}
+\begin{frame}{Equations}
 The baseline specification: 
 \begin{equation*}
     Y_{i,t} = \underbrace{\beta_1 [ Bank_i \times \mathbbm{1}\{ t \leq 2009 \} ]}_{\text{\textcolor{red}{Null hypothesis: $\beta_1=0$}}} + \beta_2 bank_i + X_{i, 2004}' \gamma + \delta_t + \theta_s + \epsilon_{i,t}
@@ -384,7 +368,7 @@ The baseline specification:
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{tables with columns showing up sequentially}
+\begin{frame}{A table with columns showing up sequentially}
 \begin{table}
 \centering
 \begin{adjustbox}{max width=0.75\textwidth}
@@ -419,6 +403,41 @@ The baseline specification:
 \end{adjustbox}
 \end{table}
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{A table with rows showing up sequentially}
+\begin{table}[h]
+\centering
+\begin{adjustbox}{max width=0.75\textwidth}
+\begin{threeparttable}
+\begin{tabular}{l*{2}{c}}
+	\toprule
+	& \multicolumn{2}{c}{Average marginal effects} \\
+	\midrule
+	\onslide<1->{\textbf{Panel A:} & & \\
+	\emph{Baseline: work off-farm locally} & \emph{stay on farm} & \emph{work off-farm outside hometown} \\
+	\addlinespace
+	land right intensity&     -0.0224** &      0.0175*  \\
+                    &    (0.0108)   &    (0.0103)   \\
+	\midrule
+	}
+	\onslide<2>{\textbf{Panel B:} & & \\
+	\emph{Baseline: work off-farm seasonlly} & \emph{stay on farm} & \emph{work off-farm permanently} \\
+	\addlinespace
+	land right intensity&     -0.0173*  &      0.0084   \\
+                    &    (0.0101)   &    (0.0108)   \\
+	\midrule
+	}
+	\onslide<1->{Observations & 7678 & 7678 \\
+	\bottomrule
+	}
+\end{tabular}				
+\end{threeparttable}
+\end{adjustbox}
+\end{table}	
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[label=robustness_check_subprime]{Robustness checks: using hyperlinks}
