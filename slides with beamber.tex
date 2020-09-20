@@ -116,6 +116,10 @@
 % renumber pages
 \usepackage{appendixnumberbeamer} 
 
+% for timeline tables
+\newcommand\ytl[2]{
+	\parbox[b]{11em}{\hfill{\color{cyan}\bfseries\sffamily #1}~$\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad \parbox[c]{6.4cm}{\vspace{8pt}\color{red!40!black!80}\raggedright\sffamily #2.\\[7pt]}\\[-3pt]}
+
 
 
 
@@ -219,7 +223,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Background about credit unions}
+\subsection*{Background}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -267,6 +271,23 @@ This frame shows how array figures.
 \end{table}
 \end{frame}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Timeline}
+\begin{table}
+\centering
+\begin{minipage}[t]{.9\linewidth}
+	\color{gray}
+	\rule{\linewidth}{1pt}
+	 \ytl{Jan 2020}{Outbreak noted in China}
+	 \ytl{Mar 11, 2020}{Recognized as a pandemic by WHO}
+	 \ytl{Mar 13, 2020}{Federal government declared national emergency}
+	 \ytl{Mar 19, 2020}{California ordered first stay-at-home lockdown}
+	 \ytl{Apr 11, 2020}{IRS started it first round stimulus payments}
+	\rule{\linewidth}{1pt}%
+\end{minipage}%
+\end{table}
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
